@@ -37,7 +37,7 @@ export default class Example extends Component {
                 body:JSON.stringify(this.state.form)
             }
 
-            let res= await fetch('http://walletapp.test/api/transfer',config)
+            let res= await fetch('https://walletapp12.herokuapp.com/api/transfer',config)
             let data= await res.json()
 
             this.setState({
@@ -62,7 +62,7 @@ export default class Example extends Component {
 //Request a API
     async componentDidMount(){
     try {
-            let res= await fetch('http://walletapp.test/api/wallet')
+            let res= await fetch('https://walletapp12.herokuapp.com/api/wallet')
             let data= await res.json()
             
             this.setState({
